@@ -14,7 +14,10 @@
   ],
   "scripts": {
     "test": "bun cli/create.ts test-app",
-    "clean:test": "rmdir /s /q test-app 2>nul || rm -rf test-app 2>/dev/null || true"
+    "clean:test": "rmdir /s /q test-app 2>nul || rm -rf test-app 2>/dev/null || true",
+    "prepublishOnly": "bun run clean:test",
+    "version": "git add -A",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "bun",
