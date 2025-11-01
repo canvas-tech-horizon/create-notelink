@@ -1,0 +1,40 @@
+{
+  "name": "create-notelink",
+  "version": "0.1.0",
+  "description": "CLI tool to create NoteLink projects",
+  "type": "module",
+  "bin": {
+    "create-notelink": "./cli/create.ts"
+  },
+  "files": [
+    "cli",
+    "template",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "bun cli/create.ts test-app",
+    "clean:test": "rmdir /s /q test-app 2>nul || rm -rf test-app 2>/dev/null || true"
+  },
+  "keywords": [
+    "bun",
+    "elysia",
+    "notelink",
+    "cli",
+    "scaffold",
+    "generator"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/canvas-tech-horizon/create-notelink.git"
+  },
+  "bugs": {
+    "url": "https://github.com/canvas-tech-horizon/create-notelink/issues"
+  },
+  "homepage": "https://github.com/canvas-tech-horizon/create-notelink#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
