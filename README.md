@@ -19,13 +19,12 @@ bun create notelink my-app
 ### After installation
 
 ```bash
-bun create notelink my-app
 cd my-app
 bun install
 bun dev
 ```
 
-Your API documentation will be available at http://localhost:8080/swagger
+Your API documentation will be available at http://localhost:8080/doc-api
 
 ## What's Included
 
