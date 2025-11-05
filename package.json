@@ -13,9 +13,13 @@
     "LICENSE"
   ],
   "scripts": {
+    "build": "bun build cli/create.ts --outdir dist --target node --format esm",
+    "dev": "bun cli/create.ts",
     "test": "bun cli/create.ts test-app",
     "clean:test": "rmdir /s /q test-app 2>nul || rm -rf test-app 2>/dev/null || true",
-    "prepublishOnly": "bun run clean:test",
+    "clean:build": "rmdir /s /q dist 2>nul || rm -rf dist 2>/dev/null || true",
+    "prebuild": "bun run clean:build",
+    "prepublishOnly": "bun run clean:test && bun run build",
     "version": "git add -A",
     "postversion": "git push && git push --tags"
   },
